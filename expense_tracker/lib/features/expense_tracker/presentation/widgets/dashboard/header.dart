@@ -5,19 +5,34 @@ class HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
       children: [
-       
-       Container(
-          alignment: Alignment.topLeft,
-         child: Image.asset('lib/core/assets/header1.png'),
-       ),
-
-        const SizedBox(
-          height: 20,
+        Container(
+          width: 60.0,
+          height: 60.0,
+          decoration: BoxDecoration(color: Colors.blue, shape: BoxShape.circle),
         ),
 
-        
+        const SizedBox(width: 10),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Good Morning, Carlo!',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+
+            const SizedBox(width: 10),
+
+            Text(
+              'Track your expenses, start your day right!',
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.grey, // Set the text color to grey here
+              ),
+            ),
+          ],
+        ),
       ],
     );
   }

@@ -1,4 +1,3 @@
-
 import 'package:expense_tracker/features/expense_tracker/presentation/screen/calendar_screen.dart';
 import 'package:expense_tracker/features/expense_tracker/presentation/screen/dashboard_screen.dart';
 import 'package:flutter/material.dart';
@@ -7,44 +6,47 @@ import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../features/expense_tracker/presentation/screen/add_expense_screen.dart';
-
+import '../features/expense_tracker/presentation/screen/main_screen.dart';
 
 part 'router.g.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
 List<GoRoute> get routes => [
-      // ================= Add-Expense Screen ================= //
-       GoRoute(
-        name: '/add-expense',
-        path: '/add-expense',
-        builder: (context, state) => const AddExpenseScreen(),
-        // builder: (context, state) => const SplashScreen(),
-      ),
+  // ================= Add-Expense Screen ================= //
+  GoRoute(
+    name: '/add-expense',
+    path: '/add-expense',
+    builder: (context, state) => const AddExpenseScreen(),
+    // builder: (context, state) => const SplashScreen(),
+  ),
 
-      // ================= Calendar-View Screen ================= //
-      GoRoute(
-        name: '/calendar-view',
-        path: '/calendar-view',
-        builder: (context, state) => const CalendarScreen(),
-      ),
-      
-      // ================= Dashboard Screen ================= //
-      GoRoute(
-        name: '/dashboard',
-        path: '/dashboard',
-        builder: (context, state) => const DashboardScreen(),
-      ),
+  // ================= Calendar-View Screen ================= //
+  GoRoute(
+    name: '/calendar-view',
+    path: '/calendar-view',
+    builder: (context, state) => const CalendarScreen(),
+  ),
 
-      
-    ];
+  // ================= Dashboard Screen ================= //
+  GoRoute(
+    name: '/dashboard',
+    path: '/dashboard',
+    builder: (context, state) => const DashboardScreen(),
+  ),
+
+  GoRoute(
+    name: '/main-screen',
+    path: '/main-screen',
+    builder: (context, state) => const MainScreen(),
+  ),
+];
 
 @riverpod
-GoRouter goRoute(Ref ref) {  
-
+GoRouter goRoute(Ref ref) {
   return GoRouter(
     routes: routes,
-    initialLocation: '/dashboard',
+    initialLocation: '/main-screen',
     navigatorKey: navigatorKey,
   );
 }

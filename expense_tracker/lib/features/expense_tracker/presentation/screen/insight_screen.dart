@@ -1,10 +1,9 @@
-import 'package:expense_tracker/features/expense_tracker/presentation/widgets/add_expense/add_expense_header.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/reusable_widgets/scroll_control/scroll_conntrol.dart';
 
-class AddExpenseScreen extends StatelessWidget {
-  const AddExpenseScreen({super.key});
+class InsightScreen extends StatelessWidget {
+  const InsightScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +35,7 @@ List<Widget> bodyScrollableList() {
         alignment: Alignment.center,
         width: double.maxFinite,
         margin: const EdgeInsets.symmetric(horizontal: 30),
-        child: AddExpenseHeader(),
+        child: Text('Insights Coming Soon'),
       ),
     ),
 
