@@ -2,6 +2,7 @@ import 'package:expense_tracker/features/expense_tracker/presentation/widgets/ad
 import 'package:flutter/material.dart';
 
 import '../../../../core/reusable_widgets/scroll_control/scroll_conntrol.dart';
+import '../widgets/add_expense/add_expense_body.dart';
 
 class AddExpenseScreen extends StatelessWidget {
   const AddExpenseScreen({super.key});
@@ -29,7 +30,7 @@ List<Widget> bodyScrollableList() {
   // =============== List of Widgets Body ============== //
 
   return <Widget>[
-    // ==================== Help Center Body ========================= //
+    // ==================== Add Expense Body ========================= //
     SizedBox(height: 100),
     Center(
       child: Container(
@@ -39,20 +40,12 @@ List<Widget> bodyScrollableList() {
         child: AddExpenseHeader(),
       ),
     ),
-
-    // Container(
-    //   alignment: Alignment.center,
-    //   width: double.maxFinite,
-    //   margin: const EdgeInsets.symmetric(horizontal: 30),
-    //   child: const BoxConstraintsWidth(
-    //     widgetContent: HelpCenterBodyDesktop(),
-    //   ),
-    // ),
-    // const SizedBox(
-    //   height: 100,
-    // ),
-
-    // // ==================== Footer ====================== //
-    // const DFooterSection(),
+    const SizedBox(height: 20),
+    Container(
+      alignment: Alignment.center,
+      width: double.maxFinite,
+      margin: const EdgeInsets.symmetric(horizontal: 30),
+      child: AddExpenseBody(),
+    ),
   ];
 }
