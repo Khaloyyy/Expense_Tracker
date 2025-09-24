@@ -28,7 +28,7 @@ class _AddExpenseBodyState extends ConsumerState<AddExpenseBody> {
         value: 'Shopping',
         child: Row(
           children: [
-            Icon(Icons.shopping_cart),
+            Icon(Icons.shopping_bag),
             SizedBox(width: 20),
             Text('Shopping'),
           ],
@@ -53,7 +53,11 @@ class _AddExpenseBodyState extends ConsumerState<AddExpenseBody> {
       DropdownMenuItem(
         value: 'Bills',
         child: Row(
-          children: [Icon(Icons.receipt), SizedBox(width: 10), Text('Bills')],
+          children: [
+            Icon(Icons.receipt_long),
+            SizedBox(width: 20),
+            Text('Bills'),
+          ],
         ),
       ),
     ]);
@@ -79,7 +83,6 @@ class _AddExpenseBodyState extends ConsumerState<AddExpenseBody> {
     amountController.clear();
     descriptionController.clear();
     setState(() {
-      _selectedCategory = 'Category';
       _selectedDateTime = DateTime.now();
     });
 
