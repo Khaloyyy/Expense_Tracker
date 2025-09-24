@@ -16,7 +16,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _screens = [
     DashboardScreen(),
     InsightScreen(),
-    AddExpenseScreen(),
+    // AddExpenseScreen(),
   ];
 
   void _onNavBarTap(int index) {
@@ -25,11 +25,11 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
-  void _onFloatingTap() {
-    setState(() {
-      _selectedIndex = 2; // AddExpenseScreen
-    });
-  }
+  // void _onFloatingTap() {
+  //   setState(() {
+  //     _selectedIndex = 2; // AddExpenseScreen
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,9 @@ class _MainScreenState extends State<MainScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-        onPressed: _onFloatingTap,
+        onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => const AddExpenseScreen()),
+        ),
         tooltip: 'Add Expense',
         backgroundColor: Colors.black,
         child: const Icon(Icons.add, color: Colors.white),
