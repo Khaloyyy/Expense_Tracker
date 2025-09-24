@@ -11,6 +11,19 @@ class AddExpenseHeader extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+
+                color: const Color.fromARGB(255, 172, 161, 161),
+              ),
+              child: IconButton(
+                icon: const Icon(Icons.close),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ),
             Text(
               'Add New Expense',
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
