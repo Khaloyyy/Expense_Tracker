@@ -35,4 +35,25 @@ class ExpenseListNotifier extends StateNotifier<List<ExpenseModel>> {
     final expenseJsonList = state.map((e) => json.encode(e.toJson())).toList();
     await prefs.setStringList('expenses', expenseJsonList);
   }
+
+  Future<void> deleteExpense(String id) async {
+    state = state.where((expense) => expense.id != id).toList();
+    await _saveExpenses();
+  }
+
+  Future<void> _saveExpenses() async {
+    final prefs = await SharedPreferences.getInstance();
+    final expenseJsonList = state.map((e) => json.encode(e.toJson())).toList();
+    await prefs.setStringList('expenses', expenseJsonList);
+  }
+
+  Future<void> updateExpense(ExpenseModel updatedExpense) async {
+    state = state
+        .map(
+          (expense) =>
+              expense.id == updatedExpense.id ? updatedExpense : expense,
+        )
+        .toList();
+    await _saveExpenses();
+  }
 }
