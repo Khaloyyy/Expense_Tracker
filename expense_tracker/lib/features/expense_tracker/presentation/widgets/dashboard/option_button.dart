@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../domain/enums/expense_filter.dart';
 
 class OptionButton extends StatelessWidget {
@@ -27,7 +28,38 @@ class OptionButton extends StatelessWidget {
                 const SizedBox(width: 10),
                 _buildButton(context, 'This Month', ExpenseFilterType.month),
                 const SizedBox(width: 10),
-                _buildButton(context, 'Calendar', ExpenseFilterType.all),
+                Expanded(
+                  child: InkWell(
+                    onTap: () {
+                      context.push('/calendar-view');
+                    },
+                    borderRadius: BorderRadius.circular(30.0),
+                    child: Container(
+                      height: 30,
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+
+                        border: Border.all(color: Colors.black),
+                        borderRadius: BorderRadius.circular(30.0),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                            color: Colors.grey,
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: const Offset(0, 3),
+                          ),
+                        ],
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Calendar',
+                          style: TextStyle(fontSize: 7.9, color: Colors.black),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
