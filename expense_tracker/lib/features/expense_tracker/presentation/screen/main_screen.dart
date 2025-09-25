@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'dashboard_screen.dart';
 import 'insight_screen.dart';
-import 'add_expense_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -37,9 +37,7 @@ class _MainScreenState extends State<MainScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-        onPressed: () => Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => const AddExpenseScreen()),
-        ),
+        onPressed: () => context.push('/add-expense'),
         tooltip: 'Add Expense',
         backgroundColor: Colors.black,
         child: const Icon(Icons.add, color: Colors.white),
