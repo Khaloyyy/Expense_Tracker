@@ -104,6 +104,11 @@ class _SummaryExpenseState extends ConsumerState<SummaryExpense> {
                 ref
                     .read(expenseListProvider.notifier)
                     .deleteExpense(expense.id);
+
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Expense Deleted')),
+                );
+
                 Navigator.pop(context);
               },
               child: const Text('Delete'),
@@ -269,6 +274,11 @@ class _SummaryExpenseState extends ConsumerState<SummaryExpense> {
                 ref
                     .read(expenseListProvider.notifier)
                     .updateExpense(updatedExpense);
+
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Expense Updated')),
+                );
+
                 Navigator.pop(context);
               },
               child: const Text('Update'),

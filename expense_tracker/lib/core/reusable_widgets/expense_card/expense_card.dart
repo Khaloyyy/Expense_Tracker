@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class ExpenseCard extends StatelessWidget {
   final String description;
@@ -17,11 +18,11 @@ class ExpenseCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-      elevation: 3,
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+      elevation: 2,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(17.0),
         child: Row(
           children: [
             // Category Icon or Initial
@@ -55,7 +56,7 @@ class ExpenseCard extends StatelessWidget {
                   ),
 
                   Text(
-                    "${date.day}/${date.month}/${date.year}",
+                    DateFormat('h:mm a').format(date),
                     style: const TextStyle(fontSize: 12, color: Colors.grey),
                   ),
                 ],

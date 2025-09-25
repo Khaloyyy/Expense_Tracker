@@ -90,7 +90,7 @@ class _AddExpenseBodyState extends ConsumerState<AddExpenseBody> {
       context,
     ).showSnackBar(const SnackBar(content: Text('Expense Saved')));
     debugPrint('Expense Saved: ${expense.toJson()}');
-    // Optionally clear fields or show a success message
+    Navigator.of(context).pop();
   }
 
   @override
@@ -190,7 +190,6 @@ class _AddExpenseBodyState extends ConsumerState<AddExpenseBody> {
           width: double.maxFinite,
           child: ElevatedButton(
             onPressed: _saveExpense,
-
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.black,
               padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
