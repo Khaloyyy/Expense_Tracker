@@ -4,13 +4,35 @@ A Flutter mobile application that tracks your daily expenses
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+    Steps to run the project
 
-A few resources to get you started if this is your first Flutter project:
+        - Open repository with vs code
+        - Open your desired Emulator
+        - Hit F5 to start running the program
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+    Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+        -Add an Expense
+            - You can write the amount , description , and date
+            - Date is initially set to the time and date you want to add expense so you dont have to worry adding it manually. But you also have the power to change the date in  your desired date and time
+
+        - Update Expense
+            - You can modify your expense and update your storage locally
+
+        - Delete Expense
+            - Delete your expenses if you dont need it anymore
+
+        - Calendar View
+            - You can track your expenses by selecting the Date in the calendar and it will show the expenses you made in that day and also it will show the total expenses.
+
+    Your design/architecture choices
+
+        - Simple Black and White Design with Minimalist icons
+        - Used Feature-First Architecture
+
+
+    Known limitations or possible improvements
+
+        - Limitations of this that it is only saving your data locally using shared_preference
+        - Use cloud for storage
+        - Have a Login Screen so that it can be used by many people and track their expenses using cloud storage
