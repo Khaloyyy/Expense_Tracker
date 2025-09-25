@@ -10,7 +10,10 @@ class HeaderWidget extends StatelessWidget {
         Container(
           width: 60.0,
           height: 60.0,
-          decoration: BoxDecoration(color: Colors.blue, shape: BoxShape.circle),
+          decoration: BoxDecoration(
+            color: Colors.black,
+            shape: BoxShape.circle,
+          ),
         ),
 
         const SizedBox(width: 10),
