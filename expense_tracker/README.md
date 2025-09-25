@@ -41,6 +41,7 @@ A Flutter mobile application that tracks your daily expenses
 <img width="360" height="815" alt="Screenshot 2025-09-25 141428" src="https://github.com/user-attachments/assets/19e1d568-f3bd-4393-9bfb-e313c9904d65" />
 <img width="371" height="813" alt="Screenshot 2025-09-25 141445" src="https://github.com/user-attachments/assets/e980e1ef-e241-4805-b524-41fcafad3e7c" />
 <img width="347" height="820" alt="Screenshot 2025-09-25 141501" src="https://github.com/user-attachments/assets/ee08d428-297b-4980-840b-86071431de60" />
+<img width="353" height="806" alt="image" src="https://github.com/user-attachments/assets/e8426fd1-48f3-4b9d-bad9-790862be0226" />
 <img width="368" height="826" alt="Screenshot 2025-09-25 141605" src="https://github.com/user-attachments/assets/d172a50e-85a6-4c35-8ee0-233bd691032e" />
 <img width="381" height="770" alt="Screenshot 2025-09-25 141617" src="https://github.com/user-attachments/assets/2c7d7dec-d492-4123-9e29-630f0a74c96c" />
 <img width="358" height="813" alt="Screenshot 2025-09-25 141627" src="https://github.com/user-attachments/assets/f4f0094c-cf8a-4083-b874-e1a379421b5b" />
