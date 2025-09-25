@@ -44,7 +44,6 @@ List<Widget> bodyScrollableList() {
     Container(
       alignment: Alignment.topLeft,
       width: double.maxFinite,
-
       child: DashboardWidgetScreen(),
     ),
   ];

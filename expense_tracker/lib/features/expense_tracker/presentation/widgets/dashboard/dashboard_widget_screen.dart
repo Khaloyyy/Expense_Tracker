@@ -14,7 +14,7 @@ class DashboardWidgetScreen extends ConsumerStatefulWidget {
 }
 
 class _DashboardWidgetScreenState extends ConsumerState<DashboardWidgetScreen> {
-  ExpenseFilterType _filterType = ExpenseFilterType.all;
+  ExpenseFilterType _filterType = ExpenseFilterType.today;
 
   void _onFilterChanged(ExpenseFilterType type) {
     setState(() {
