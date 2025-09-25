@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../domain/enums/expense_filter.dart';
 import 'option_button.dart';
 import 'summary_card.dart';
 import 'summary_expense.dart';
 
-class DashboardWidgetScreen extends StatefulWidget {
+class DashboardWidgetScreen extends ConsumerStatefulWidget {
   const DashboardWidgetScreen({super.key});
 
   @override
-  State<DashboardWidgetScreen> createState() => _DashboardWidgetScreenState();
+  ConsumerState<DashboardWidgetScreen> createState() =>
+      _DashboardWidgetScreenState();
 }
 
-class _DashboardWidgetScreenState extends State<DashboardWidgetScreen> {
+class _DashboardWidgetScreenState extends ConsumerState<DashboardWidgetScreen> {
   ExpenseFilterType _filterType = ExpenseFilterType.all;
 
   void _onFilterChanged(ExpenseFilterType type) {
@@ -34,7 +36,7 @@ class _DashboardWidgetScreenState extends State<DashboardWidgetScreen> {
 
         const SizedBox(height: 10),
         SummaryCard(filterType: _filterType),
-        const SizedBox(height: 10),
+
         SummaryExpense(filterType: _filterType),
       ],
     );
